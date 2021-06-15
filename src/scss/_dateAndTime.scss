@@ -1,0 +1,25 @@
+.date-time_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0;
+  .date, .time {
+    display: flex;
+    flex-direction: row;
+    font-size: 17px;
+    &__dd {
+      margin-left: 4px;
+    }
+  }
+  .date {
+    margin-right: 30px;
+    .date__dd-mm-yy {
+      margin-left: 6px;
+    }
+  }
+  .time {
+    .time-info {
+      font-weight: 700;
+    }
+  }
+}

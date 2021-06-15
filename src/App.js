@@ -64,19 +64,8 @@ function App() {
     }
   }
 
-  window.addEventListener("load", function() {
-    document.querySelector('.loader-wrapper').classList.add('finish');
-  })
-
   return (
     <div className="wrapper">
-      <div className="loader-wrapper">
-        <div className="loader">
-          <div className="dot"></div>
-          <div className="dot"></div>
-          <div className="dot"></div>
-        </div>
-      </div>
       <div className="background"><div className="bg"></div></div>
       <div className="container">
         <DateAndTime/>
@@ -87,8 +76,8 @@ function App() {
             <div className="city">
               <h2 className="city-name"><span>{weather.name}</span><sup>{weather.sys.country}</sup></h2>
               <div className="grid-container">
-                <span className="data-title">Latitude:</span><span className="data-value">{(weather.coord.lat).toFixed(2)}'</span> 
-                <span className="data-title">Longitude:</span><span className="data-value">{weather.coord.lon.toFixed(2)}'</span>
+                <span className="data-title">Latitude:</span><span className="data-value">{(weather.coord.lat.toFixed(2)).replace('.', '°')}'</span> 
+                <span className="data-title">Longitude:</span><span className="data-value">{(weather.coord.lon.toFixed(2)).replace('.', '°')}'</span>
                 <span className="data-title">Sunrise:</span><span className="data-value">{(new Date( `${weather.sys.sunrise}` * 1000)).toLocaleString().slice(12, -3)}</span>
                 <span className="data-title">Sunset:</span><span className="data-value">{(new Date( `${weather.sys.sunset}` * 1000)).toLocaleString().slice(12, -3)}</span>
                 <span className="data-title">Humidity:</span><span className="data-value">{weather.main.humidity}</span>

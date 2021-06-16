@@ -1,5 +1,3 @@
-Weather widget written in React. In the config. js file, in the API_KEY variable, put your own key that you can get when you log in to the Weather API - OpenWeatherMap.
-
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

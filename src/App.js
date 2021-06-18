@@ -93,7 +93,7 @@ function App() {
               <span className="description">{weather.weather[0].description}</span>
             </div>
           </div>
-        ) : <p className="error-info">{query === '' && 'Please, write city'} {(query !== '' && !query.main) ? 'There is no such location' : null}</p>}
+        ) : <p className="error-info">{query === '' && 'Please, write a city'} {(query !== '' && !query.main) ? 'There is no such location' : null}</p>}
         </div>
       </div>
   )
